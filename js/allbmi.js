@@ -39,6 +39,7 @@ function calcu(e){
 
 //加入列表，並同步更新網頁與 localstorage
 let bmiresult = 0;
+let colorclass = 0;
 
 function addData(e) {
     e.preventDefault();
@@ -47,8 +48,32 @@ function addData(e) {
     let heightNum = (height.value)/100;
         bmiresult = (weightNum / (heightNum * heightNum)).toFixed(2);  
     console.log(bmiresult); 
+
+    let health = 0;
+        colorclass = 0;
+    if (bmiresult<18.5){
+        alert('過輕');
+        health = '過輕';
+        colorclass = 'blue'; 
+
+    }else if(bmiresult<24 && bmiresult>=18.5){
+        alert('標準')
+        health = '標準';
+        colorclass = 'green'; 
+
+    }else if(bmiresult<27 && bmiresult>=24){
+        alert('過重')
+        health = '過重';
+        colorclass ='orange'; 
+        
+    }else{
+        alert('肥胖')
+        health = '肥胖';  
+        colorclass = 'red';      
+    };
+
     
-    let final = '你的BMI是<span>'+ bmiresult +'</span>   體重<span>'+ weight.value +'</span>kg   身高<span>'+ height.value +'</span>cm &emsp;&emsp;';
+    let final = '<li class="'+ colorclass+'">'+health+' &emsp;&emsp;你的BMI是<span>'+ bmiresult +'</span>   體重<span>'+ weight.value +'</span>kg   身高<span>'+ height.value +'</span>cm &emsp;&emsp;';
     // result.innerHTML = final; 
 
     var txt = final;
@@ -58,7 +83,7 @@ function addData(e) {
     data.push(todo);
     updateList(data);
     localStorage.setItem('listDataBMI', JSON.stringify(data));
-    // return(bmiresult);
+    
   }
 
   // 更新網頁內容
@@ -66,9 +91,10 @@ function addData(e) {
     str = '';
     var len = items.length;
     for (var i = 0; len > i; i++) {
-      str += '<li>' + items[i].content+'<a href="#" data-index=' + i + ' />刪除此筆</a></li>' ;
+      str += items[i].content+'<a href="#" data-index=' + i + ' />刪除此筆</a></li>' ;
     }
     result.innerHTML = str;
+    console.log('第二次'+bmiresult);
   }
 
 

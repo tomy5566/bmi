@@ -143,11 +143,31 @@ h2{
   font-size: 20px;
   color: #559ac8;
   background-color: aliceblue;
-  border: #4A4A4A 1px solid;
+  /* border: #4A4A4A 1px solid; */
   margin: 10px;
   padding: 5px 20px;
   
 }
+
+/* 區分顏色 */
+.content .card ul .red{
+  border-left: red 10px solid;
+}
+
+.content .card ul .orange{
+  border-left: orange 10px solid;
+}
+
+.content .card ul .green{
+  border-left: green 10px solid;
+}
+
+.content .card ul .blue{
+  border-left: blue 10px solid;
+}
+
+/* 區分顏色結束 */
+
 
 .content .card ul li span{
   font-size: 35px;

@@ -91,7 +91,10 @@ h1 {
  {
   width: 250px;
   font-size: 20PX;
-  color: red;
+  margin-bottom: 10px;
+  color: black;
+  border: #FFD366 3px solid;
+  border-radius: 10px;
 }
 
 
@@ -101,20 +104,132 @@ h1 {
   justify-content: center;
   margin: 30px;
   font-size: 18px;
-
+  
 }
+
 
 .submitDatabtn{
   color: #424242 ;
   background-color: #FFD366;
   border-radius: 50%;
-  border: 0px;
+  border: 0px ;
   width: 15vh;
   height: 15vh;
   font-size: 25px;
 
 }
+/*以下更改按鈕顏色*/
 
+.submitDatabtn.blue{
+  color:#31BAF9;
+  border: #31BAF9 5px solid;
+  background-color: #424242;
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+
+
+.submitDatabtn.green{
+  color:#86D73F;
+  border: #86D73F 5px solid;
+  background-color: #424242;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.submitDatabtn.orange{
+  color:orange;
+  border: orange 5px solid;
+  background-color: #424242;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.submitDatabtn.red{
+  color:red;
+  border: red 5px solid;
+  background-color: #424242;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.bmiFin.blue{
+  color:#31BAF9;
+  font-weight: bold;
+  position: relative;
+  top: -22%;
+  left: 18%;
+}
+
+.bmiFin.green{
+  color:#86D73F;
+  font-weight: bold;
+  position: relative;
+  top: -22%;
+  left: 18%;
+}
+
+.bmiFin.orange{
+  color:orange;
+  font-weight: bold;
+  position: relative;
+  top: -22%;
+  left: 18%;
+}
+
+.bmiFin.red{
+  color:red;
+  font-weight: bold;
+  position: relative;
+  top: -22%;
+  left: 18%;
+}
+
+.bmiFin.blue img{
+  background-color:#31BAF9;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+.bmiFin.green img{
+  background-color:#86D73F;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+.bmiFin.orange img{
+  background-color:orange;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+.bmiFin.red img{
+  background-color:red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+
+
+/*以上更改按鈕顏色*/
 
 .content{
   display: flex;
@@ -159,11 +274,11 @@ h2{
 }
 
 .content .card ul .green{
-  border-left: green 10px solid;
+  border-left: #86D73F 10px solid;
 }
 
 .content .card ul .blue{
-  border-left: blue 10px solid;
+  border-left: #31BAF9 10px solid;
 }
 
 /* 區分顏色結束 */

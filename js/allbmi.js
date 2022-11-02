@@ -1,45 +1,56 @@
 let height = document.querySelector('.personheight');
 let weight = document.querySelector('.personweight');
 let submit = document.querySelector('.submitData');
+let submitbtn = document.querySelector('.submitDatabtn');
+// let submitbtn;
 let result = document.querySelector('.content ul');
-
-
+//重整按鈕設定
+let btnReset;
 
 var data = JSON.parse(localStorage.getItem('listDataBMI')) || [];
+submitbtn.addEventListener('click', calcu, false);
 
+// function getSubmitDomAndAddEventlinstener () {
+//   submitbtn = document.querySelector('.submitDatabtn');
+//   submitbtn.addEventListener('click', calcu, false);
+// }
+// getSubmitDomAndAddEventlinstener();
 
-submit.addEventListener('click', calcu, false);
 
 function calcu(e){
     e.preventDefault();
     // alert('5566');
     // bmiCalculate();
     addData(e);
+    changeResultWord(e);
+    btnReset = document.querySelector('#reword img');
+    btnReset.addEventListener('click' , btnReset1, false);
+  }
+  
+
+function btnReset1(e){
+  // alert('ttt');
+  submit.innerHTML = '<input type="button" class="submitDatabtn" value="計算">';
+  //因為DOM改變  要重新抓一次 監聽一次
+  submitbtn = document.querySelector('.submitDatabtn');
+  submitbtn.addEventListener('click', calcu, false);
+  // getSubmitDomAndAddEventlinstener();
 }
 
 
-// function bmiCalculate(){
-//     let weightNum = weight.value;
-//     let heightNum = (height.value)/100;
-//     let bmiresult = (weightNum / (heightNum * heightNum)).toFixed(2);
-//     console.log(bmiresult); 
-    
-//     let final = '<li>你的BMI是<span>'+ bmiresult +'</span>   體重<span>'+ weight.value +'</span>kg   身高<span>'+ height.value +'</span>cm</li>';
-//     result.innerHTML = final;
 
-//     ABC();
-// }
-
-
-
-// function ABC(){
-//     alert('www');
-// }
+//更改送出按鈕的文字
+function changeResultWord(e){
+    // console.log('新按鈕'+newResultWord);
+    // submit.innerHTML = '<input type="button" class="submitDatabtn '+colorclass+'" value="'+newResultWord+'">'+'<p class="bmiFin '+colorclass+'">BMI : '+bmiresult+'</p>'
+    submit.innerHTML = '<input type="button" class="submitDatabtn '+colorclass+'" value="BMI:'+ bmiresult+'">'+'<p id="reword" class="bmiFin '+colorclass+'">&nbsp; &nbsp; &nbsp; '+newResultWord+'<img src="images/arrows-rotate-solid.svg" alt="重整"></img></p>'
+}
 
 
 //加入列表，並同步更新網頁與 localstorage
 let bmiresult = 0;
 let colorclass = 0;
+let newResultWord = 0;
 
 function addData(e) {
     e.preventDefault();
@@ -55,21 +66,33 @@ function addData(e) {
         alert('過輕');
         health = '過輕';
         colorclass = 'blue'; 
+        newResultWord = '過輕';
+
 
     }else if(bmiresult<24 && bmiresult>=18.5){
         alert('標準')
         health = '標準';
         colorclass = 'green'; 
+        newResultWord = '標準';
 
     }else if(bmiresult<27 && bmiresult>=24){
         alert('過重')
         health = '過重';
         colorclass ='orange'; 
-        
-    }else{
+        newResultWord = '過重';
+    
+    }else if(bmiresult>=27){
         alert('肥胖')
         health = '肥胖';  
-        colorclass = 'red';      
+        colorclass = 'red';  
+        newResultWord = '肥胖'; 
+        
+        
+    }else{
+        alert('請輸入身高體重')
+        health = '無值';  
+        colorclass = 'red';  
+        newResultWord = '無值';    
     };
 
     
@@ -121,8 +144,10 @@ function clearALL(e){
    localStorage.clear(e);
    alert('全部都清空了');
    result.innerHTML = '<li>全部都清空了</li>';
+   submit.innerHTML = '<input type="button" class="submitDatabtn" value="計算">';
+
+     //因為DOM改變  要重新抓一次 監聽一次 和上面重整一樣
+  submitbtn = document.querySelector('.submitDatabtn');
+  submitbtn.addEventListener('click', calcu, false);
    
 }
-
-
-

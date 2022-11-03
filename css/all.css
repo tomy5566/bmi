@@ -49,22 +49,24 @@ table {
    
 /* ----我是分隔----- */
 
+.warp{
+  width: 1024px;
+  margin: 0 auto;
+}
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: black;
   text-align: center;
   margin-top: 3vh;
-  margin-bottom: 3vh;
-  
+  margin-bottom: 3vh;  
 }
-
-
 
 .header{
   background-color: #424242;
-  height: 33vh;
+  /* height: 33vh; */
   max-width: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;  
@@ -92,19 +94,24 @@ h1 {
   width: 250px;
   font-size: 20PX;
   margin-bottom: 10px;
-  color: black;
+  color: whitesmoke;
   border: #FFD366 3px solid;
   border-radius: 10px;
+  background-color: #646464;
 }
 
+.header .inputData .personheight::placeholder,
+.header .inputData .personweight::placeholder
+ {
+  color: whitesmoke;
+}
 
 .header .submitData{
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 30px;
-  font-size: 18px;
-  
+  font-size: 18px;  
 }
 
 
@@ -113,120 +120,91 @@ h1 {
   background-color: #FFD366;
   border-radius: 50%;
   border: 0px ;
-  width: 15vh;
-  height: 15vh;
+  width: 150px;
+  height: 150px;
   font-size: 25px;
-
 }
+
 /*以下更改按鈕顏色*/
+
+.submitDatabtn{
+  font-weight: bold;
+  font-size: 25px;  
+}
 
 .submitDatabtn.blue{
   color:#31BAF9;
   border: #31BAF9 5px solid;
   background-color: #424242;
-  font-weight: bold;
-  font-size: 25px;
-  
 }
-
 
 .submitDatabtn.green{
   color:#86D73F;
   border: #86D73F 5px solid;
   background-color: #424242;
-  font-weight: bold;
-  font-size: 25px;
 }
 
 .submitDatabtn.orange{
   color:orange;
   border: orange 5px solid;
   background-color: #424242;
-  font-weight: bold;
-  font-size: 25px;
 }
 
 .submitDatabtn.red{
   color:red;
   border: red 5px solid;
   background-color: #424242;
-  font-weight: bold;
-  font-size: 25px;
 }
 
 
-.bmiFin.blue{
-  color:#31BAF9;
+.bmiFin{
   font-weight: bold;
   position: relative;
-  top: -22%;
+  top: -30%;
   left: 18%;
+}
+
+.bmiFin.blue{
+  color:#31BAF9;
 }
 
 .bmiFin.green{
   color:#86D73F;
-  font-weight: bold;
-  position: relative;
-  top: -22%;
-  left: 18%;
 }
 
 .bmiFin.orange{
   color:orange;
-  font-weight: bold;
-  position: relative;
-  top: -22%;
-  left: 18%;
 }
 
 .bmiFin.red{
   color:red;
-  font-weight: bold;
+}
+
+.bmiFin img{
+  border-radius: 50%;
+  border: 3px #424242 solid;
+  width: 25px;
+  height: 25px;
   position: relative;
-  top: -22%;
-  left: 18%;
+  top: 0;
+  left: 20%;
 }
 
 .bmiFin.blue img{
   background-color:#31BAF9;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  top: 0;
-  left: 20%;
 }
 
 .bmiFin.green img{
   background-color:#86D73F;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  top: 0;
-  left: 20%;
 }
 
 .bmiFin.orange img{
   background-color:orange;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  top: 0;
-  left: 20%;
 }
 
 .bmiFin.red img{
   background-color:red;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  position: relative;
-  top: 0;
-  left: 20%;
 }
-
 
 
 /*以上更改按鈕顏色*/
@@ -238,7 +216,6 @@ h1 {
   padding: 20px;
   background-color: gray;
 }
-
 
 h2{
   text-align: center;
@@ -292,7 +269,6 @@ h2{
 
 .content .card ul li a{
   font-size: 15px;
-
 }
 
 
@@ -305,8 +281,6 @@ text-align: right;
   flex-direction: row;
   justify-content: center;
 } */
-
-
 
 
 .footer{

@@ -9,7 +9,7 @@
 ## 使用技術
 - HTML
 - CSS: [flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex)
-- JavaScript
+- JavaScript 
 - [localStorage](https://developer.mozilla.org/zh-TW/docs/Web/API/Window/localStorage)
 
 ## JavaScript 使用技術介紹

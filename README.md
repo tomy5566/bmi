@@ -5,7 +5,6 @@
 
 ## DEMO link
 [https://tomy5566.github.io/bmi/](https://tomy5566.github.io/bmi/)
-<a href="https://tomy5566.github.io/bmi/" target='_blank'>[https://tomy5566.github.io/bmi/]</a>
 
 ## 使用技術
 - HTML

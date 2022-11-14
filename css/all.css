@@ -129,7 +129,9 @@ h1 {
 
 .submitDatabtn{
   font-weight: bold;
-  font-size: 25px;  
+  font-size: 25px; 
+  position: relative;
+  top: 10%; 
 }
 
 .submitDatabtn.blue{
@@ -160,8 +162,13 @@ h1 {
 .bmiFin{
   font-weight: bold;
   position: relative;
-  top: -30%;
+  top: -20%;
   left: 18%;
+}
+
+
+.bmiFin.hidden{
+  visibility: hidden;
 }
 
 .bmiFin.blue{

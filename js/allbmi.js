@@ -38,7 +38,10 @@ function calcu(e){
 //重新計算 改變按鈕的函式
 function btnResetALL(e){
   // alert('ttt');
-  submit.innerHTML = '<input type="button" class="submitDatabtn" value="計算">';
+  submit.innerHTML = '<input type="button" class="submitDatabtn" value="計算">'+'<p id="reword" class="bmiFin hidden">&nbsp; &nbsp; &nbsp; 原始<img src="images/arrows-rotate-solid.svg" alt="重整"></img></p>';
+  height.value= [];
+  weight.value= [];
+  
   //因為DOM改變  要重新抓一次 監聽一次
   submitbtn = document.querySelector('.submitDatabtn');
   submitbtn.addEventListener('click', calcu, false);
@@ -152,6 +155,7 @@ clearAll.addEventListener('click', clearALL , false);
 
 function clearALL(e){
    localStorage.clear(e);
+   data = [];   //也要清空DATA否則他下次會重新寫入
    alert('全部都清空了');
    result.innerHTML = '<li>全部都清空了</li>';
    submit.innerHTML = '<input type="button" class="submitDatabtn" value="計算">';

@@ -23,6 +23,12 @@
 7. 使用[ HTMLElement.dataset ](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)讓下方列表可以單獨刪除特定筆紀錄。
 8. 使用[ localStorage.clear](https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear) 可以一次清除所以列表紀錄值。
 
+## 功能介紹
+- 可輸入身高與體重數值，快速計算BMI結果。
+- 計算結果利用顏色區分BMI的健康標準，分為藍色過輕，綠色標準，橘色過重，紅色肥胖四種，可一目了然。
+- 將計算結果與顏色，同步顯示於按鈕上，並設置"重置"圖標利於使用者操作。
+- 將計算結果與顏色條列式記錄於下方欄位中，並自動標註記算日期，方便使用者把瀏覽器當作BMI健康管理日誌。
+- 上述條列式紀錄，可以單除刪除某筆資料，或是想要全部刪除資料，亦可使用右下角案鳥操作進行。
 
 ## 介面展示
 ![image](https://github.com/tomy5566/bmi/blob/main/BMIDEMO.gif)
